@@ -1,12 +1,20 @@
 # EasyPass
+[![PyPi](https://img.shields.io/pypi/v/t)](https://pypi.org/project/easypass/)
+![Python](https://img.shields.io/pypi/pyversions/Django)
+
 Модуль для простой генерации паролей и почтовых ящиков
 ## Оглавление
-1. Установка
-2. Функции и классы
-  3. Аргументы
-4. Генерация пароля
-5. Генерация почтового ящика
-6. Исключения
+1. [Установка](https://github.com/uprj/easypass.py#установка)
+2. [Функции и классы](https://github.com/uprj/easypass.py#функции-и-классы)
+    1. [Аргументы](https://github.com/uprj/easypass.py#аргументы)
+        1. [Password](https://github.com/uprj/easypass.py#password)
+        2. [Password.print()](https://github.com/uprj/easypass.py#password.print())
+        3. [Password.save()](https://github.com/uprj/easypass.py#password.save())
+        4. [Email](https://github.com/uprj/easypass.py#email)
+        5. [Email.print()](https://github.com/uprj/easypass.py#Email.print())
+        6. [Email.save()](https://github.com/uprj/easypass.py#email.save())
+3. [Генерация пароля](https://github.com/uprj/easypass.py#генерация-пароля)
+4. [Генерация почтового ящика](https://github.com/uprj/easypass.py#генерация-почтового-ящика)
 ## Установка
 Установка осуществляется командой в терминале:
 ```
@@ -46,3 +54,21 @@ ____
 | Параметр | Значение | Описание |
 |:----------------:|:---------:|:----------------:|
 | path | None | Путь к файлу |
+## Генерация пароля
+Пример кода генерации пароля:
+```python
+import easypass
+
+password = easypass.Password()
+password.print()
+password.save("my.password")
+```
+## Генерация почтового ящика
+Пример кода генерации почтового ящика:
+```python
+import easypass
+
+email = easypass.Email()
+email.print()
+email.save("my.password")
+```
